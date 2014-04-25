@@ -118,7 +118,33 @@ static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/wea
 
 - (IBAction)plistTapped:(id)sender
 {
+    NSString *string = [NSString stringWithFormat:@"%@weather.php?format=plist", BaseURLString];
+    NSURL *url = [NSURL URLWithString:string];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    // Make sure to set the responseSerializer correctly
+    operation.responseSerializer = [AFPropertyListResponseSerializer serializer];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        self.weather = (NSDictionary *)responseObject;
+        self.title = @"PLIST Retrieved";
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+    
+    [operation start];
+
 }
 
 - (IBAction)xmlTapped:(id)sender
