@@ -23,6 +23,7 @@
 		F957DCEA185F35E0008DCB3B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F957DCE9185F35E0008DCB3B /* SystemConfiguration.framework */; };
 		F957DCEC185F35E6008DCB3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F957DCEB185F35E6008DCB3B /* UIKit.framework */; };
 		F957DD28185F3E90008DCB3B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F957DD27185F3E90008DCB3B /* Security.framework */; };
+		FB63DC38190C942A00B3AEA7 /* WeatherHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FB63DC37190C942A00B3AEA7 /* WeatherHTTPClient.m */; };
 		FB8BBA57190AE3240031C411 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8BBA33190AE3240031C411 /* AFHTTPRequestOperation.m */; };
 		FB8BBA58190AE3240031C411 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8BBA35190AE3240031C411 /* AFHTTPRequestOperationManager.m */; };
 		FB8BBA59190AE3240031C411 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8BBA37190AE3240031C411 /* AFHTTPSessionManager.m */; };
@@ -67,6 +68,8 @@
 		F957DCE9185F35E0008DCB3B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F957DCEB185F35E6008DCB3B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F957DD27185F3E90008DCB3B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB63DC36190C942A00B3AEA7 /* WeatherHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherHTTPClient.h; sourceTree = "<group>"; };
+		FB63DC37190C942A00B3AEA7 /* WeatherHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherHTTPClient.m; sourceTree = "<group>"; };
 		FB8BBA32190AE3240031C411 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		FB8BBA33190AE3240031C411 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		FB8BBA34190AE3240031C411 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				D233D09216B4011B005212DE /* WTTableViewController.h */,
 				D233D09316B4011B005212DE /* WTTableViewController.m */,
 				D233D07616B400EF005212DE /* Supporting Files */,
+				FB63DC36190C942A00B3AEA7 /* WeatherHTTPClient.h */,
+				FB63DC37190C942A00B3AEA7 /* WeatherHTTPClient.m */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				D233D08016B400EF005212DE /* WTAppDelegate.m in Sources */,
 				FB8BBA5A190AE3240031C411 /* AFNetworkReachabilityManager.m in Sources */,
 				FB8BBA60190AE3240031C411 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				FB63DC38190C942A00B3AEA7 /* WeatherHTTPClient.m in Sources */,
 				D233D09416B4011B005212DE /* WTTableViewController.m in Sources */,
 				FB8BBA5C190AE3240031C411 /* AFURLConnectionOperation.m in Sources */,
 				FB8BBA65190AE3240031C411 /* UIProgressView+AFNetworking.m in Sources */,
